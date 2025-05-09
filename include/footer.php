@@ -9,48 +9,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
 <script src="ajax-scripts.js"></script>
+
+<!-- Start of ChatBot (www.chatbot.com) code -->
 <script>
-let openai_api_key = "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";
-function toggleChat() {
-  document.getElementById('chatbot-container').classList.toggle('hidden');
-}
-
-async function sendMessage() {
-  const input = document.getElementById('user-input');
-  const chatLog = document.getElementById('chat-log');
-  const userMessage = input.value;
-
-  if (!userMessage) return;
-
-  chatLog.innerHTML += `<div><strong>You:</strong> ${userMessage}</div>`;
-  input.value = '';
-
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
-    method: "POST",
-    headers: {
-      "Authorization": `Bearer ${openai_api_key}`,
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify({
-      model: "gpt-3.5-turbo",
-      messages: [{ role: "user", content: userMessage }]
-    })
-  });
-
-  const data = await response.json();
-  const botReply = data.choices?.[0]?.message?.content || "Sorry, I couldn't understand.";
-
-  chatLog.innerHTML += `<div><strong>Bot:</strong> ${botReply}</div>`;
-  chatLog.scrollTop = chatLog.scrollHeight;
-}
+  window.__ow = window.__ow || {};
+  window.__ow.organizationId = "9634a25b-dce7-488c-a638-34feb3d623a3";
+  window.__ow.template_id = "24a16c9c-a611-4ec3-91fa-d62e2fb182f7";
+  window.__ow.integration_name = "manual_settings";
+  window.__ow.product_name = "chatbot";   
+  ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[OpenWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.openwidget.com/openwidget.js",t.head.appendChild(n)}};!n.__ow.asyncInit&&e.init(),n.OpenWidget=n.OpenWidget||e}(window,document,[].slice))
 </script>
-
-<div id="chatbot-container" class="fixed bottom-4 right-4 w-80 bg-white border rounded-xl shadow-lg p-4 hidden z-50">
-  <div id="chat-log" class="h-60 overflow-y-auto text-sm mb-2"></div>
-  <input id="user-input" type="text" placeholder="Ask something..." class="w-full border rounded px-2 py-1" />
-  <button onclick="sendMessage()" class="mt-2 w-full bg-blue-500 text-white py-1 rounded">Send</button>
-</div>
-
-<button onclick="toggleChat()" class="fixed bottom-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-full z-50">
-  💬 Chat
-</button>
+<noscript>You need to <a href="https://www.chatbot.com/help/chat-widget/enable-javascript-in-your-browser/" rel="noopener nofollow">enable JavaScript</a> in order to use the AI chatbot tool powered by <a href="https://www.chatbot.com/" rel="noopener nofollow" target="_blank">ChatBot</a></noscript>
+<!-- End of ChatBot code -->
