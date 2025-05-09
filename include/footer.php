@@ -11,7 +11,6 @@
 <script src="ajax-scripts.js"></script>
 <script>
 let openai_api_key = "YOUR_OPENAI_API_KEY";
-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
 function toggleChat() {
   document.getElementById('chatbot-container').classList.toggle('hidden');
 }
